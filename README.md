@@ -17,6 +17,34 @@ tuning (Optuna).
    - Ensemble of LightGBM + XGBoost (soft voting)
 6. Picks the best model by cross-validated ROC-AUC and reports accuracy, F1 and ROC-AUC on the test set.
 7. Saves the model, a metrics file and a feature-importance chart in `models/`.
+## Model Performance
+
+The project compares four machine learning approaches:
+
+- Logistic Regression (Baseline)
+- Tuned LightGBM
+- XGBoost
+- Soft Voting Ensemble (LightGBM + XGBoost)
+
+### Best Model: Soft Voting Ensemble
+
+The ensemble achieved the following results on the held-out test dataset:
+
+| Evaluation Metric | Score |
+|---|---:|
+| Accuracy | 94.81% |
+| F1 Score | 95.67% |
+| ROC-AUC | 98.16% |
+| Cross-validation ROC-AUC | 98.03% |
+
+### Classification Report
+
+| Class | Precision | Recall | F1-Score |
+|---|---:|---:|---:|
+| Fail | 0.96 | 0.91 | 0.94 |
+| Pass | 0.94 | 0.97 | 0.96 |
+
+The model uses Optuna for hyperparameter optimization of LightGBM and compares the performance of multiple classifiers before selecting the best model using cross-validation.
 
 ## Datasets
 
