@@ -1,0 +1,23 @@
+# Data and trained models (large files, re-create with the scripts)
+data/
+models/
+predictions.csv
+
+# Kaggle API key - never commit this
+kaggle.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.venv-1/
+*.pyc
+predictions_new.csv
